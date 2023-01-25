@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/join.css">
+</head>
+<body>
+    <div id="join">
+        <div class="join_wrap">
+            <h1><img src="images/logo/lego_land.png" alt="레고랜드 메인로고" width="1870" height="570">메인로고</h1>
+            <p id="join_x"><img src="images/icon/crossed.png" alt="x이미지" width="512" height="512"> x</p>
+        </div><!--.join_wrap-->
+        <h2>회원가입</h2>
+        <p>약관을 확인하신 후, 동의항목에 체크해 주세요.</p>
+        <div id="join_s">
+            <p>
+                <input type="checkbox" name="join_chk" id="all_chk1" value="1">
+                <span class="all_chk2">전체 동의</span>
+                <label for="all_chk1">전체 동의</label>
+            </p>
+            <div class="join_txt_wrap">
+                <p>아래 모든 약관 및 프로모션 안내 수신(선택)<br>내용을 확인하고 동의합니다.</p>
+                <p>※ 선택 항목 동의 거부 시에도 회원가입에 영향은 없으나, <br><span>정보 제공이 제한될 수 있습니다.</span></p>
+            </div>
+            <div class="join_chk_txt">
+                <p>
+                    <input type="checkbox" name="join_chk" id="join_chk1" value="1">
+                    <span class="join_txt">[필수] 만 14세 이상입니다.</span>
+                    <label for="join_chk1"><strong>[필수]</strong> 만 14세 이상입니다.</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="join_chk" id="join_chk2" value="2">
+                    <span class="join_txt">[필수] 개인정보 수집 및 활용 동의</span>
+                    <label for="join_chk2"><strong>[필수]</strong> 개인정보 수집 및 활용 동의</label>
+                    <a href="#">></a>
+                </p>
+                <p>
+                    <input type="checkbox" name="join_chk" id="join_chk3" value="3">
+                    <span class="join_txt">[필수] 전자상거래 이용약관</span>
+                    <label for="join_chk3"><strong>[필수]</strong> 전자상거래 이용약관</label>
+                    <a href="#">></a>
+                </p>
+                <p>
+                    <strong>[선택] SMS 프로모션 안내 수신 동의</strong><a href="#">></a>
+                    <input type="checkbox" name="join_chk" id="join_chk4" value="4">
+                    <span class="join_txt">이메일 수신 동의</span>
+                    <label for="join_chk4">이메일 수신 동의</label>
+                    <input type="checkbox" name="join_chk" id="join_chk5" value="5">
+                    <span class="join_txt">문자 수신 동의</span>
+                    <label for="join_chk5">문자 수신 동의</label>
+                </p>
+            </div>
+            <p><input type="button" value="다음으로" id="join_next">다음으로</p>
+        </div><!--join_s-->
+    </div>
+</body>
+</html>

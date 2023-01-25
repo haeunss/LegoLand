@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* 하단 */
+#bottom{
+    background-color: #ccc;
+    width: 100%;
+    height: 310px;
+}
+#footer{
+    width: 1400px;
+    height: 310px;
+    margin: 0 auto;
+    position: relative;
+}
+.b_txt{
+    font-style: normal;
+    line-height: 1.5em;
+    padding-top: 42px;
+    font-size: 15px;
+    font-family:NanumSquareNeo2;
+}
+.b_txt > span{
+    display: block;
+}
+.b_txt > span > a:hover{
+    text-decoration: underline;
+    color: rgb(249, 98, 43);
+}
+.b_img > li{
+    font-size: 0;
+    position: absolute;
+}
+.b_img > .sns1{
+    top: 42px;
+    right: 120px;
+}
+.b_img > .sns2{
+    top: 42px;
+    right: 60px;
+}
+.b_img > .sns3{
+    top: 42px;
+    right: 0;
+}
+.b_img > li >  a > img{
+    width: 50px;
+    height: 50px;
+}
+.b_img > li >  a > img:hover{
+    opacity: 0.6;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/login.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+   <div id="login_wrap">
+        <h1><img src="images/logo/lego_land.png" alt="레고랜드 메인로고" width="1870" height="570">메인로고</h1>
+        <h2>로그인</h2>
+        <p><input type="text" placeholder="아이디 입력" id="u_id" autocomplete="off"></p>
+        <p><input type="password" placeholder="비밀번호 입력"  id="u_pwd"autocomplete="off"></p>
+
+        <p id="chk_wrap1">
+            <input type="checkbox" name="chk" id="chk1" value="1">
+            <label for="chk1">아이디저장</label>
+            <input type="checkbox" name="chk" id="chk2" value="2">
+            <label for="chk2">자동로그인</label>
+        </p>
+
+        <p id="btn_wrap1">
+            <input type="button" value="로그인" id="s_btn1">
+        </p>
+
+        <h3><span>소셜계정으로 함께하기</span></h3>
+        <ul class="sns">
+            <li><a href="#"><img src="images/icon/login_kakao.png" alt="#" width="512" height="512">카카오로 로그인</a></li>
+            <li><a href="#"><img src="images/icon/login_naver.png" alt="#" width="512" height="512">네이버로 로그인</a></li>
+            <li><a href="#"><img src="images/icon/login_google.png" alt="#" width="417" height="417">구글로 로그인</a></li>
+            <li><a href="#"><img src="images/icon/login_facebook.png" alt="#" width="512" height="512">페이스북으로 로그인</a></li>
+        </ul>
+        <div>
+            <p><button type="button" class="e_login_btn">이메일로 로그인</button></p>
+            <p><button type="button">이메일로 가입</button></p>
+        </div>
+   </div>
+</body>
+</html>

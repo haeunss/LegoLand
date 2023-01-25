@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+
+
+nav{
+    display: block;
+}
+
+body,html{
+    height: 100%;
+}
+#top_wrap{
+    width: 100%;
+    height: 100%;
+    min-height: 900px;
+    position: relative;
+}
+#main_video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 1900px;
+    overflow: hidden;
+    min-height: 800px;
+}
+#main_video video{
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* notice */
+#notice{
+    font-family:NanumSquareNeo2;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    text-align: center;
+    height: 40px;
+    padding-top: 20px;
+}
+#notice > a{
+    color: #000;
+}
+#notice > a:hover{
+    font-weight: bold;
+    color: orangered
+}
+
+/* 상단 */
+#top{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.quick_m1{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.35);
+    min-width: 1900px;
+    min-height: 800px;
+}
+.quick_m2{
+    width: 1300px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+}
+.quick_m2 > ul > li:nth-of-type(1){
+    float: left;
+}
+.quick_m2 > ul > li:nth-of-type(2){
+    float: right;
+    width: 1095px;
+    height: 60px
+}
+.quick_m3{
+    width: 1095px;
+    height: 60px
+}
+/* 레고랜드 메인 로고 */
+.quick_m2 > ul > li > h1 > a{
+    font-size: 0px;
+}
+.quick_m2 > ul > li:nth-of-type(1) > h1 > a > img{
+    width: 200px;
+    height: 60px;
+}
+/* 로그인 회원가입, 메뉴 */
+.quick_m3 > a{
+    width: 28px;
+    height: 28px;
+    font-size: 0px;
+    display: inline-block;
+}
+.quick_m3 > a:nth-of-type(1){
+    margin-right: 15px;
+}
+.quick_m3 > a > img{
+    width: 28px;
+    height: 28px;
+    margin-left: 1000px;
+    margin-right: 5px;
+    margin-top: 15px;
+}
+
+/* 온가족을 위한...함께 떠나요 */
+.main_v_txt1{
+    width: 1300px;
+    text-align: center;
+    margin: 0 auto;
+    float: left;
+    margin-top: 290px;
+}
+.main_v_txt1 > p, .main_v_txt2 > a{
+    font-family: NanumSquareNeo5;
+}
+.main_v_txt1 > p:first-child{
+    font-size: 24px;
+    color: #fff;
+}
+.main_v_txt1 > p:nth-of-type(2){
+    color: #fff;
+    font-size: 70px;
+    margin-top: 14px;
+    margin-bottom: 35px;
+}
+.main_v_txt2{
+    border: 4px solid #fff;
+    border-radius: 100px;
+    width: 220px;
+    height: 65px;
+    padding-top: 17px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.227);
+    margin: 0 auto;
+}
+.main_v_txt2 a{ 
+    color: #fff;
+    font-size: 22px;
+}
+.main_v_txt2:hover{
+    background-color: rgba(0, 0, 0, 0.455);
+}
+
+
+/* 퀵메뉴 */
+.quick_m4{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.quick_m4 > p > img{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 28px;
+    height: 28px;
+    z-index: 100;
+}
+#menu2{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: NanumSquareNeo2;
+    width: 445px;
+    height: 600px;
+    float: right;
+    border-top: 58px solid rgba(245, 245, 245, 1);
+    font-size: 18px;
+}
+#menu2 > ul{
+    width:445px;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+#menu2 > ul > li{
+    width:445px; 
+    line-height:25px;
+}
+#menu2 > ul > li > a{
+    font-weight: bold;
+    line-height: 40px;
+}
+#menu2 a, #menu2 li{
+    color: #000;
+}
+#menu2 > ul > li > a.sel2{
+    color:#0ecb68;
+}
+#menu2 > ul > li > ul > li > a{
+    margin-left: 10px;
+}
+#menu2 > ul > li > ul > li > ul > li{
+    padding-left: 5px;
+    width: 340px;
+    margin: 3px 0px 3px 20px;
+}
+#menu2 > ul > li > ul > li > ul > li:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+.sub > li{
+    margin-bottom: 5px;
+}
+.sub > li::before{
+    content: "\002d";
+}

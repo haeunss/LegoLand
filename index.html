@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>LEGOLAND(리뉴얼)_포트폴리오</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/legoland.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/join.css">
+    <link rel="stylesheet" href="css/join2.css">
+<style>
+    body::-webkit-scrollbar{
+        width:17px;
+    }
+    body::-webkit-scrollbar-track{
+        background-color:rgb(255, 255, 255);
+    }
+    body::-webkit-scrollbar-thumb{
+        background-color:#b6bcc5;
+        border-radius: 20px;
+    }
+    body::-webkit-scrollbar-thumb:hover{
+        background-color:rgb(135, 137, 141);
+    }
+    body::-webkit-scrollbar-thumb:active{
+        background-color:#ffcf4d;
+    }
+</style>
+</head>
+<body>
+
+    <div id="notice">
+        알려드립니다.
+        본 사이트는 상업적 목적이 아닌
+        개인 포트폴리오 용도로 만들어졌습니다.
+        홈페이지의 일부내용과 이미지는
+        저작권이 따로 있음을 밝혀드립니다.
+        <a href="#">[ 닫기 ]</a>
+    </div><!--notice-->
+
+    <div id="top_wrap">
+        <div id="login_wrap">
+            <div class="login_wrap">
+                <h1><img src="images/logo/lego_land.png" alt="레고랜드 메인로고" width="1870" height="570">메인로고</h1>
+                <p id="login_x"><img src="images/icon/crossed.png" alt="x이미지" width="512" height="512"> x</p>
+            </div><!--.login_wrap-->
+            <h2>로그인</h2>
+            <p><input type="text" placeholder="아이디 입력" id="u_id" autocomplete="off"></p>
+            <p><input type="password" placeholder="비밀번호 입력"  id="u_pwd" autocomplete="off"></p>
+    
+            <p id="chk_wrap1">
+                <input type="checkbox" name="chk" id="chk1" value="1">
+                <span class="chk_s1">아이디저장</span>
+                <label for="chk1">아이디저장</label>
+                <input type="checkbox" name="chk" id="chk2" value="2">
+                <span class="chk_s2">자동로그인</span>
+                <label for="chk2">자동로그인</label>
+            </p><!--chk_wrap1-->
+    
+            <p id="btn_wrap1">
+                <input type="button" value="로그인" id="s_btn1">
+            </p><!--btn_wrap1-->
+    
+            <h3><span>소셜계정으로 함께하기</span></h3>
+            <ul class="sns">
+                <li><a href="#"><img src="images/icon/login_kakao.png" alt="카카오" width="512" height="512">카카오로 로그인</a></li>
+                <li><a href="#"><img src="images/icon/login_naver.png" alt="네이버" width="512" height="512">네이버로 로그인</a></li>
+                <li><a href="#"><img src="images/icon/login_google.png" alt="구글" width="417" height="417">구글로 로그인</a></li>
+                <li><a href="#"><img src="images/icon/login_facebook.png" alt="페이스북" width="512" height="512">페이스북으로 로그인</a></li>
+            </ul><!--sns-->
+            <div>
+                <p><button type="button" class="e_login_btn">이메일로 로그인</button></p>
+                <p><button type="button" class="e_join_btn">이메일로 가입</button></p>
+            </div>
+        </div><!--#login_wrap-->
+
+        <div id="join">
+            <div class="join_wrap">
+                <h1><img src="images/logo/lego_land.png" alt="레고랜드 메인로고" width="1870" height="570">메인로고</h1>
+                <p id="join_x"><img src="images/icon/crossed.png" alt="x이미지" width="512" height="512"> x</p>
+            </div><!--.join_wrap-->
+            <h2>회원가입</h2>
+            <p>약관을 확인하신 후, 동의항목에 체크해 주세요.</p>
+            <div id="join_s">
+                <p id="chk_wrap2">
+                    <input type="checkbox" name="join_chk" id="all_chk1" class="type" value="1">
+                    <span class="all_chk2">전체 동의</span>
+                    <label for="all_chk1">전체 동의</label>
+                </p><!--chk_wrap2-->
+                <div class="join_txt_wrap">
+                    <p>아래 모든 약관 및 프로모션 안내 수신(선택)<br>내용을 확인하고 동의합니다.</p>
+                    <p>※ 선택 항목 동의 거부 시에도 회원가입에 영향은 없으나, <br><span>정보 제공이 제한될 수 있습니다.</span></p>
+                </div><!--join_txt_wrap-->
+                <div class="join_chk_txt">
+                    <p>
+                        <input type="checkbox" name="join_chk" id="join_chk1" value="1">
+                        <span class="join_txt">[필수] 만 14세 이상입니다.</span>
+                        <label class="join_agree" for="join_chk1"><strong>[필수]</strong> 만 14세 이상입니다.</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="join_chk" id="join_chk2" value="2">
+                        <span class="join_txt">[필수] 개인정보 수집 및 활용 동의</span>
+                        <label class="join_agree" for="join_chk2"><strong>[필수]</strong> 개인정보 수집 및 활용 동의</label>
+                        <a href="#">></a>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="join_chk" id="join_chk3" value="3">
+                        <span class="join_txt">[필수] 전자상거래 이용약관</span>
+                        <label class="join_agree" for="join_chk3"><strong>[필수]</strong> 전자상거래 이용약관</label>
+                        <a href="#">></a>
+                    </p>
+                    <p>
+                        <strong>[선택] SMS 프로모션 안내 수신 동의</strong><a href="#">></a>
+                        <input type="checkbox" name="join_chk" id="join_chk4" value="4">
+                        <span class="join_txt join_txt2">이메일 수신 동의</span>
+                        <label class="join_agree" for="join_chk4">이메일 수신 동의</label>
+                        <input type="checkbox" name="join_chk" id="join_chk5" value="5">
+                        <span class="join_txt join_txt3">문자 수신 동의</span>
+                        <label class="join_agree" for="join_chk5">문자 수신 동의</label>
+                    </p>
+                    <p class="all_agree">레고랜드 필수 약관에 모두 동의해주세요.</p>
+                </div><!--join_chk_txt-->
+                <p id="join_btn"><input type="button" value="다음으로" id="join_next">다음으로</p>
+            </div><!--join_s-->
+        </div><!--join-->
+
+        <div id="membership_wrap">
+            <div class="membership_wrap">
+                <h1><img src="images/logo/lego_land.png" alt="레고랜드 메인로고" width="1870" height="570">메인로고</h1>
+                <p id="join2_x"><img src="images/icon/crossed.png" alt="x이미지" width="512" height="512"> x</p>
+            </div><!--membership-->
+            <h1>회원가입</h1>
+            <div class="membership">
+                <p class="member1">
+                    <span>아이디</span>
+                    <input type="text" class="u_id" autocomplete="off" placeholder="아이디를 입력하세요" required autofocus>
+                    <span id="id_wrap">5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</span>
+                </p><!--.member1-->
+                <p class="member1">
+                    <span>비밀번호</span>
+                    <input type="password" class="u_pwd u_pwd1" autocomplete="off" placeholder="비밀번호를 입력하세요" required minlength="8" maxlength="16">
+                    <span id="pwd_wrap1">8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</span>
+                </p><!--.member1-->
+                <p class="member1">
+                    <span>비밀번호 재확인</span>
+                    <input type="password" class="u_pwd u_pwd2" autocomplete="off" placeholder="비밀번호를 한번 더 입력해주세요" required minlength="8" maxlength="16">
+                    <span id="pwd_wrap2">비밀번호가 일치하지 않습니다.</span>
+                </p><!--.member1-->
+                <p class="member1"><span>이름</span><input type="text" autocomplete="off" required></p>
+                <p class="member2"><span>생년월일</span>
+                    <input type="text" placeholder="년(4자)" autocomplete="off" required>
+                    <select id="bitrh">
+                        <option value="">월</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select><!--bitrh-->
+                    <input type="text" placeholder="일" required>
+                </p><!--.member2-->
+                <p id="gender"><span>성별</span>
+                    <select class="gender">
+                        <option value="">성별</option>
+                        <option value="남자">남자</option>
+                        <option value="여자">여자</option>
+                    </select><!--.gender-->
+                </p><!--#gender-->
+                <p id="number">
+                    <span>휴대전화</span>
+                    <select class="number">
+                        <option value="가나 +233">가나 +233</option>
+                        <option value="네덜란드 +31">네덜란드 +31</option>
+                        <option value="대한민국 +82" selected>대한민국 +82</option>
+                        <option value="미국/캐나다 +1">미국/캐나다 +1</option>
+                        <option value="스위스 +41">스위스 +41</option>
+                        <option value="영국 +86">영국 +86</option>
+                        <option value="일본 +81">일본 +81</option>
+                        <option value="칠레 +56">칠레 +56</option>
+                        <option value="콩고 +242">콩고 +242</option>
+                        <option value="태국 +66">태국 +66</option>
+                        <option value="프랑스 +33">프랑스 +33</option>
+                        <option value="홍콩 +852">홍콩 +852</option>
+                    </select>
+                    <input id="number_enter1" type="text" placeholder="전화번호 입력" autocomplete="off" required>
+                    <button class="number_enter1" type="button">인증번호 받기</button>
+                    <input id="number_enter2" type="text" placeholder="인증번호를 입력하세요" autocomplete="off" required>
+                    <button type="button" id="sign_btn">가입하기</button>
+                </p><!--number-->
+            </div><!--.membership-->
+        </div><!--membership_wrap-->
+
+        <div id="main_video">
+            <video width="1920" height="1080" autoplay preload="auto" muted loop poster="media/stop.png">
+                <source src="media/main.mp4" type="video/mp4"> 
+            </video>
+        </div>
+        <header id="top">
+            <div class="quick_m1">
+               <div class="quick_m2">
+                    <ul>
+                        <li><h1><a href="index.html"><img src="images/logo/lego_land_w.png" alt="레고랜드" width="1878" height="600">레고랜드 로고</a></h1></li> 
+                        <li>
+                            <div class="quick_m3">
+                                <a href="login.html" class="login"><img src="images/icon/login.png" alt="로그인 회원가입" width="512" height="512">로그인회원가입</a>
+                                <a href="#"><img src="images/icon/sitemap_icon.png" alt="메뉴" width="27" height="27">메뉴</a>
+                                <div class="quick_m4">
+                                    <p><img src="images/icon/cancel.png" alt="엑스"></p>
+                                    <nav id="menu2">
+                                        <ul>
+                                            <li>
+                                                <a href="#" data-menu="1">이용권</a>
+                                                <ul class="sub sub1">
+                                                    <li><a href="#">이용권 알아보기</a>
+                                                        <ul>
+                                                            <li><a href="#">1일 이용권 구매하기</a></li>
+                                                            <li><a href="#">오후 이용권 구매하기</a></li>
+                                                            <li><a href="#">연간 이용권 구매하기</a></li>
+                                                            <li><a href="#">패스트트랙</a></li>
+                                                            <li><a href="#">레이니 데이 게런티 Rainy Day Fuarantee</a></li>
+                                                            <li><a href="#">VIP 투어</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">구매하기</a>
+                                                        <ul>
+                                                            <li><a href="#">공식 채널 구매하기</a></li>
+                                                            <li><a href="#">온라인 티켓 환불 접수</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li><!--메뉴1-->
+                                            <li>
+                                                <a href="#" data-menu="2">즐길거리</a>
+                                                <ul class="sub sub2">
+                                                    <li><a href="#">테마 파크</a>
+                                                        <ul>
+                                                            <li><a href="#">라이드 &amp; 어트랙션</a></li>
+                                                            <li><a href="#">쇼핑</a></li>
+                                                            <li><a href="#">다이닝</a></li>
+                                                            <li><a href="#">엔터테이먼트</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">시즌 이벤트</a>
+                                                        <ul>
+                                                            <li><a href="#">Brick-or-Treat 몬스터파티</a></li>
+                                                            <li><a href="#">Merry Bricksmas</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">프로모션</a>
+                                                        <ul>
+                                                            <li><a href="#">카카오 T 셔틀</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li><!--메뉴2-->
+                                            <li>
+                                                <a href="#" data-menu="3">LEGOLAND&reg; 호텔</a>
+                                                <ul class="sub sub3">
+                                                    <li><a href="#">LEGOLAND&reg; 호텔</a>
+                                                        <ul>
+                                                            <li><a href="#">Themed room</a></li>
+                                                            <li><a href="#">Services &amp; Amenities</a></li>
+                                                            <li><a href="#">Dining</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Bed &amp; Brick</a></li>
+                                                </ul>
+                                            </li><!--메뉴3-->
+                                            <li>
+                                                <a href="#" data-menu="4">LEGOLAND&reg;를 200% 즐기는 방법</a>
+                                                <ul class="sub sub4">
+                                                    <li><a href="#">방문 전 확인 사항</a>
+                                                        <ul>
+                                                            <li><a href="#">운영 시간</a></li>
+                                                            <li><a href="#">주차 &amp; 오시는길</a></li>
+                                                            <li><a href="#">COVID-19 방역지침에 따른 파크 이용 안내</a></li>
+                                                            <li><a href="#">보안 관련 안내 사항</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">이용가이드</a>
+                                                        <ul>
+                                                            <li><a href="#">편의 시설 안내</a></li>
+                                                            <li><a href="#">Park Map</a></li>
+                                                            <li><a href="#">장애인 편의 제도</a></li>
+                                                            <li><a href="#">LEGOLAND 공식 모바일 어플</a></li>
+                                                            <li><a href="#">리조트 분실물 운용 관리</a></li>
+                                                            <li><a href="#">자주 묻는 질문 FAQ</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li><!--메뉴4-->
+                                            <li><a href="#" data-menu="5">문의사항</a>
+                                                <ul class="sub sub5">
+                                                    <li><a href="#">기업상품문의</a></li>
+                                                    <li><a href="#">학생단체문의</a></li>
+                                                    <li><a href="#">해외단체문의</a></li>
+                                                </ul>
+                                            </li><!--메뉴5-->
+                                        </ul>
+                                    </nav><!--menu2-->
+                                </div><!--quick_m4-->
+                            </div><!--quick_m3-->
+                        </li>
+                    </ul>
+                    <div class="main_v_txt1">
+                        <p>온 가족을 위한 멋진 하루</p>
+                        <p>LEGO<br>LAND</p>
+                        <div class="main_v_txt2">
+                           <a href="https://www.legoland.kr/" target="_blank">함께 떠나요!</a>
+                        </div><!--main_v_txt2-->
+                    </div><!--main_v_txt-->
+                </div><!--quick_m2-->
+            </div><!--quick_m1-->
+        </header><!--top-->
+    </div><!--top_wrap-->
+
+    <div id="quick_m5">
+        <ul class="quick_m6">
+            <li class="quick_m6_1"><a href="#top3_attraction" class="active">베스트 탑3 어트랙션</a></li>
+            <li class="quick_m6_2"><a href="#legoland_map" class="active">레고랜드 미리보기</a></li>
+            <li class="quick_m6_3"><a href="#ticket_promotion1" class="active">티켓 프로모션</a></li>
+            <li class="quick_m6_4"><a href="#event_all" class="active">지금 레고랜드는?</a></li>
+            <li class="quick_m6_5"><a href="#hotel_all" class="active">레고랜드 호텔</a></li>
+        </ul><!--quick_m6-->
+        <p><img src="images/icon/up_arrow.png" alt="위로 이미지" width="512" height="406" class="top_btn"></p>
+    </div><!--quick_m5-->
+    
+    <div id="top3_attraction">
+        <div id="top3_attraction2">
+            <div id="dark_ride">
+                <h1>베스트<span>1</span></h1>
+                <h2>레고&reg;팩토리 <span>어드벤쳐 라이드</span></h2>
+                <p class="attraction_txt">레고랜드의 가장 인기있는 놀이기구들이 궁금하시다면 <span>스크롤</span>을 내려보세요!</p>
+                <p><img src="images/top3/ride1.jpg" alt="다크라이드" width="1219" height="773"></p>
+                <p><img src="images/top3/ride2.png" alt="다크라이드" width="972" height="550"></p>
+                <div id="v_txt">
+                    <div class="v_txt">
+                        <p><img src="images/icon/girl.png" alt="레고" width="512" height="512"></p>
+                        <p>LEGO 미니 피규어가 된다면 어떤 기분일지<br>
+                        다들 상상해본적 있지 않나요?<br>
+                        상상과 모험이 현실이 되는 곳! <br>
+                        지금 바로 쪼꼬미 미니피규어 사이즈가 되어<br>
+                        LEGO가 탄생하는 특별한 여정을 함께 해보아요!</p>
+                    </div><!--.v_txt-->
+                    <div class="boarding_v1">
+                        <video width="850" height="483" autoplay preload="auto" muted loop poster="media/stop.png" class="boarding_v2">
+                        <source src="media/ride.mp4" type="video/mp4"> 
+                        </video>
+                        <div class="plus_icon1">
+                        <a href="#" class="plus_icon2"><img src="images/icon/more_view.png" alt="더보기 플러스 아이콘" width="512" height="512"></a>
+                        </div><!--plus_icon-->
+                    </div><!--boarding_v1-->
+                    <p class="more"><a href="#">more view<img src="images/icon/green_dot.png" alt="초록점" width="12" height="13"></a></p>
+                </div><!--#v_txt-->
+            </div><!--dark_ride-->
+
+            <div id="the_dragon">
+                <h1>베스트<span>2</span></h1>
+                <h2>레고&reg;캐슬 <span>더 드래곤</span></h2>
+                <p><img src="images/top3/dragon1.jpg" alt="더 드래곤" width="900" height="1227"></p>
+                <p><img src="images/top3/dragon2.jpg" alt="더 드래곤" width="1000" height="538"></p>
+                <div id="v_txt2">
+                    <div class="v_txt">
+                        <p><img src="images/icon/boy.png" alt="레고" width="512" height="512"></p>
+                        <p>마법에 걸린 레고랜드 성에 들어가볼까요?<br> 
+                        왕국에서 가장 스릴 넘치는 놀이기구,<br>
+                        전설적인 이야기 속 레고드래곤을 타고 <br>
+                        근사하게 하늘을 날아봐요~<br>
+                        재미와 미스터리가 넘쳐날거에요!</p>
+                    </div><!--.v_txt-->
+                    <div class="boarding_v1">
+                        <video width="850" height="483" autoplay preload="auto" muted loop poster="media/stop.png" class="boarding_v2 dragon_v">
+                            <source src="media/the_dragon.mp4" type="video/mp4"> 
+                        </video>
+                        <div class="plus_icon1">
+                        <a href="#" class="plus_icon2"><img src="images/icon/more_view.png" alt="더보기 플러스 아이콘" width="512" height="512"></a>
+                        </div><!--plus_icon-->
+                    </div><!--boarding_v-->
+                    <p class="more"><a href="#">more view<img src="images/icon/green_dot.png" alt="초록점" width="12" height="13"></a></p>
+                </div><!--v_txt2-->
+            </div><!--the_dragon-->
+
+            <div id="wave_racers">
+               <h1>베스트<span>3</span></h1>
+               <h2>레고&reg;시티 <span>웨이브 레이서</span></h2>
+               <p><img src="images/top3/water1.jpg" alt="웨이브 레이서" width="1920" height="1080"></p>
+               <p><img src="images/top3/water2.jpg" alt="웨이브 레이서" width="4000" height="2372"></p>
+               <div id="v_txt3">
+                    <div class="v_txt">
+                        <p><img src="images/icon/woman.png" alt="레고" width="512" height="512"></p>
+                        <p>(뛰뛰 빵빵) 미니피규어들이 살고 있는<br>
+                        북적이는 대도시 'LEGO® CITY'<br>
+                        wave racers를 타고 시원한 바람을 느끼면서<br>
+                        여러분들의 조종 실력을 뽐내주세요!<br>
+                        파도를 타면서 물 폭탄을 피할 수 있을까요?</p>
+                    </div><!--.v_txt-->
+                    <div class="boarding_v1">
+                        <video width="850" height="483" autoplay preload="auto" muted loop poster="media/stop.png" class="boarding_v2">
+                            <source src="media/wave_racers.mp4" type="video/mp4"> 
+                        </video>
+                        <div class="plus_icon1">
+                        <a href="#" class="plus_icon2"><img src="images/icon/more_view.png" alt="더보기 플러스 아이콘" width="512" height="512"></a>
+                        </div><!--plus_icon-->
+                    </div><!--boarding_v-->
+                    <p class="more"><a href="#">more view<img src="images/icon/green_dot.png" alt="초록점" width="12" height="13"></a></p>
+                </div><!--v_txt2-->
+            </div><!--wave_racers-->
+        </div><!--top3_attraction2-->
+    </div><!--top3_sttraction-->
+    
+    <div id="legoland_map">
+        <h2>레고랜드 <span>파크 맵</span></h2>
+        <h3>레고랜드에 대해 궁금한 것이 있으신가요? 하단 지도의 <span>플러스 버튼</span>을 눌러보세요!</h3>
+        <div id="map_btn">
+            <span data-value="1"><img class="plus_img1" src="images/map/plus_1_1.png" alt="닌자고월드" width="36" height="36"></span>
+            <span data-value="2"><img class="plus_img2" src="images/map/plus_1_1.png" alt="레고캐슬" width="36" height="36"></span>
+            <span data-value="3"><img class="plus_img3" src="images/map/plus_1_1.png" alt="브릭토피아" width="36" height="36"></span>
+            <span data-value="4"><img class="plus_img4" src="images/map/plus_3_4.png" alt="브릭스트릿" width="36" height="36"></span>
+            <span data-value="5"><img class="plus_img5" src="images/map/plus_1_1.png" alt="해적의 바다" width="36" height="36"></span>
+            <span data-value="6"><img class="plus_img6" src="images/map/plus_1_1.png" alt="레고시티"  width="36" height="36"></span>
+            <span data-value="7"><img class="plus_img7" src="images/map/plus_1_1.png" alt="미니랜드" width="36" height="36"></span>
+        </div><!--map_btn-->
+        <div id="map_txt">
+            <div class="selected se1 map_txt">
+                <h2>&lt;레고&reg; 닌자고월드&gt;</h2>
+                <div class="map_txt2">
+                    <p>악과 맞서는 닌자들이 살고있는 닌자고월드!<br>
+                        닌자고 세계관에서 제일 좋아하는 캐릭터는 누구인가요?</p>
+                    <p>카이? 니아? 제이? 콜? 쟌?</p>
+                    <p>그들과 함께 '스핀짓주'를 마스터하고<br>
+                        위대한 파괴자를 무찔러주세요!</p>
+                </div><!--map_txt2-->
+                <div class="se1_2 map_txt3">
+                    <div>
+                        <h3>&lt;라이드 &amp; 어트랙션&gt;</h3>
+                        <p>35 제이의 번개훈력<br>
+                        37 레고 닌자고 더 라이드<br>
+                        38 카이의 파이어 스피너<br>
+                        39 콜의 암벽 등반<br>
+                        41 닌자고 놀이터</p>
+                    </div>
+                    <div>
+                        <h3>&lt;다이닝&gt;</h3>
+                        <p>34 웍 엔 볼<br>
+                        40 카이즈 애플 프라이즈</p>
+                        <h3>&lt;기프트샵&gt;</h3>
+                        <p>36 마스터 우 웨어하우스</p>
+                    </div>
+                </div><!--se1_2 map_txt3-->
+            </div><!--selected se1 map_txt-->
+            <div class="se2 map_txt">
+                <h2>&lt;레고&reg;캐슬&gt;</h2>
+                <div class="map_txt2">
+                    <p>낭만적인 동화같은 중세 시대로 여행을 가볼까요? </p>
+                    <p>아름다운 성, 용감한 기사들과 드래곤이<br>
+                        살아 숨쉬는 레고캐슬에 흠뻑 빠져보세요!
+                    </p>
+                    <p>*주의 : 성 안에 있는 누군가를 조심하세요!!</p>
+                </div><!--map_txt2-->
+                <div class="se2_2 map_txt3">
+                    <div>
+                        <h3>&lt;라이드 &amp; 어트랙션&gt;</h3>
+                        <p>25 멀린의 프라잉 머신<br>
+                        26 빌더 공방<br>
+                        27 레고 캐슬 놀이터<br>
+                        30 드래곤 코스터<br>
+                        32 왕실 호위대<br>
+                        33 멀린의 마법열차</p>
+                    </div>
+                    <div>
+                        <h3>&lt;다이닝&gt;</h3>
+                        <p>28 위자드 프로즌 윈더즈<br>
+                        31 나이츠 피스트</p>
+                        <h3>&lt;기프트샵&gt;</h3>
+                        <p>29 로얄 마켓</p>
+                    </div>
+                </div><!--se2_2 map_txt3-->
+            </div><!--se2 map_txt-->
+            <div class="se3 map_txt">
+                <h2>&lt;브릭토피아&gt;</h2>
+                <div class="map_txt2">
+                    <p>레고 러버들의 천국!</p>
+                    <p>왕크니까 왕귀여운 듀플로 부터<br>
+                    레고 마스터 빌더 들이 있는 Build &amp; Test 까지!
+                    </p>
+                    <p>앗, 한번 들어가면 빠져나올 수 없다는 소문이!</p>
+                </div><!--map_txt2-->
+                <div class="se3_2 map_txt3">
+                    <div>
+                        <h3>&lt;라이드, 쇼 &amp; 어트랙션&gt;</h3>
+                        <p><span>10 멍키 클라임<br>
+                            11 브릭파티 (회전목마)<br>
+                            13 레고 닌자고 라이브<br>
+                            15 크리에이티브 정글<br>
+                            16 DUPLO 익스프레스<br>
+                            17 DUPLO 스플래쉬</span>
+                            <span>19 디스코 스핀<br>
+                            21 레고 창작 공작소<br>
+                            22 로봇 플레이센터<br>
+                            23 빌스 앤 테스트<br>
+                            24 레고 전망대</span></p>
+                    </div>
+                    <div>
+                        <h3>&lt;다이닝&gt;</h3>
+                        <p>9 빅 브리츠 바이츠<br>
+                            12 스낵 쉑<br>
+                            18 프릭토피아 다이너</p>
+                        <h3>&lt;기프트샵&gt;</h3>
+                        <p>14 미니피큐어 마켓<br>
+                            20 테이스티 트릿</p>
+                    </div>
+                </div><!--se3_2 map_txt3-->
+            </div><!--se3 map_txt-->
+            <div class="se4 map_txt">
+                <h2>브릭스트릿</h2>
+                <div class="map_txt2">
+                    <p>상상과 모험이 현실이 되는 곳!</p>
+                    <p>전 세계 유일하게 호텔을 가로 질러 입장하는<br>
+                    LEGOLAND® Korea 리조트!</p>
+                    <p>신나게 즐길 준비가 되셨나요?</p>
+                </div><!--map_txt2-->
+                <div class="se4_2 map_txt3">
+                    <div>
+                        <h3>&lt;편의시설&gt;</h3>
+                        <p>1 티켓 창구<br>
+                        3 유모차 & 휠체어 대여소<br>
+                        <span>(유료 이용 서비스)</span></p>
+                        <h3>&lt;라이드 & 어트랙션&gt;</h3>
+                        <p>6 레고 팩토리 어드벤쳐</p>
+                    </div>
+                    <div>
+                        <h3>&lt;다이닝&gt;</h3>
+                        <p>7 브릭 스트릿 카페<br>
+                        8 아이스크림 팩토리</p>
+                        <h3>&lt;기프트샵&gt;</h3>
+                        <p>2 빅 샵<br>
+                        4 포토 샵<br>
+                        5 픽 어 브릭</p>
+                    </div>
+                </div><!--se4_2 map_txt3-->
+            </div><!--se4 map_txt-->
+            <div class="se5 map_txt">
+                <h2>해적의 바다</h2>
+                <div class="map_txt2">
+                    <p>"이보게, 꼬마 해적들!"</p>
+                    <p>신나는 물총 싸움 한판 해보자구!</p>
+                    <p>우리의 동료가 되어 위대한 해적선을 자유롭게 오르고,<br>
+                    보물을 찾고, 멋진 항해도 시작해보는거다!</p>
+                </div><!--map_txt2-->
+                <div class="se5_2 map_txt3">
+                    <div>
+                        <h3>&lt;라이드 &amp; 어트랙션&gt;</h3>
+                        <p>42 앵커스 어웨이<br>
+                        44 파이러츠 놀이터<br>
+                        45 스플래쉬 배틀<br>
+                        46 표류 해적선<br>
+                        47 트래져 헌트</p>
+                    </div>
+                    <div>
+                        <h3>&lt;다이닝&gt;</h3>
+                        <p>43 브릭 비어드 스낵스 </p>
+                    </div>
+                </div><!--se5_2 map_txt3-->
+            </div><!--se5 map_txt-->
+            <div class="se6 map_txt">
+                <h2>레고시티</h2>
+                <div class="map_txt2">
+                    <p>이곳에서는 어린이들의 베스트!<br>
+                    바로 다이빙스쿨을 만나 볼 수 있습니다!</p>
+                    <p>운전 주행을 마치고 나면<br>
+                    귀여운 레고시티 면허증이 내 손에!</p>
+                </div><!--map_txt2-->
+                <div class="se6_2 map_txt3">
+                    <div>
+                        <h3>&lt;라이드 &amp; 어트랙션&gt;</h3>
+                        <p><span>48 파이어 아카데미<br>
+                        49 레고 시티 공항<br>
+                        51 레고랜드 익스프레스<br>
+                        54 레고 시티 경찰서<br>
+                        55 팔라스 4D 시네마<br>
+                        47 시퍼 놀이터</span>
+                        <span>58 웨이브 레이서<br>
+                        59 주니어 드라이빙 스쿨<br>
+                        60 드라이빙 스쿨 놀이터<br>
+                        62 드라이빙 스쿨<br>
+                        63 시티 항구<br>
+                        64 해상 경비 아카데미</span></p>
+                    </div>
+                    <div>
+                        <h3>&lt;다이닝&gt;</h3>
+                        <p>50 시티 스낵스<br>
+                        52 시티 레스토랑<br>
+                        56 마리나 스낵스</p>
+                        <h3>&lt;기프트샵&gt;</h3>
+                        <p>53 스튜디오 스토어<br>
+                        61 시티 샵</p>
+                    </div>
+                </div><!--se6_2 map_txt3-->
+            </div><!--se6 map_txt-->
+            <div class="se7 map_txt">
+                <h2>미니랜드</h2>
+                <div class="map_txt2">
+                    <p>"레고랜드의 모든 길은 미니랜드로 통한다!"</p>
+                    <p>모든 파크의 중심지에는<br>
+                    미니랜드가 있다는 사실 알고 있나요!?</p>
+                    <p>레고로 만들어진 대한민국의<br>
+                    유명 도시를 본다면 눈을 뗄 수 없을 거에요!</p>
+                </div><!--map_txt2-->
+                <div class="se7_2 map_txt3">
+                    <div>
+                        <h3>&lt;라이드 &amp; 어트랙션&gt;</h3>
+                        <p><span>65 여의도<br>
+                        66 서울<br>
+                        67 경복궁</span>
+                        <span>68 경주<br>
+                        69 강원<br>
+                        70 해운대<br>
+                        71 부산</span></p>
+                    </div>
+                    <div>
+                        <h3>&lt;미니피규어 교환 스테이션&gt;</h3>
+                        <p>미니 피규어 교환<br>
+                        스테이션을 찾아보세요!<br>
+                        나만의 미니피규어 컬렉션을<br>
+                        만들 수 있어요!</p>
+                    </div>
+                </div><!--"se7_2 map_txt3-->
+            </div><!--se7 map_txt-->
+        </div><!--map_txt-->
+        <div id="map_more_view"><a href="https://www.legoland.kr/%EC%A6%90%EA%B8%B8%EA%B1%B0%EB%A6%AC/%ED%85%8C%EB%A7%88-%ED%8C%8C%ED%81%AC/%EB%9D%BC%EC%9D%B4%EB%93%9C-%EC%96%B4%ED%8A%B8%EB%9E%99%EC%85%98/" target="_blank">레고랜드 더 구경하기</a></div>
+    </div><!--legoland_map-->
+    
+
+    <div id="ticket_promotion1">
+        <div id="ticket_promotion2">
+            <h2><span>티켓</span> 프로모션</h2>   
+            <p>나에게 꼭 맞춘 알찬 할인 정보! 프로모션 정보에 <span>마우스</span>를 가져가보세요!</p>
+            <div id="ticket_promotion3">
+                <div id="merry_t" class="ticket_promotion">
+                    <h3>"크리스마스 시즌 한정"</h3>
+                    <span><img src="images/ticket/brick.png" alt="크리스마스 이미지" width="603" height="603"></span>
+                    <p>online 35,000원</p>
+                    <p>- 시즌 기간 : 11월18일~12월 31일</p>
+                </div>
+                <div id="year_t" class="ticket_promotion">
+                    <h3>"연간이용권"</h3>
+                    <span><img src="images/ticket/year.png" alt="연간이용권 이미지" width="603" height="603"></span>
+                    <p>119,000원~</p>
+                    <p>- 방문일자 사전 예약 필수</p>
+                </div>
+                <div id="day_t" class="ticket_promotion">
+                    <h3>"1일 이용권"</h3>
+                    <span><img src="images/ticket/day.png" alt="1일 이용권 이미지" width="375" height="375"></span>
+                    <p>성인/청소년 50,000원~</p> 
+                    <p>어린이 40,000원~</p>
+                </div>
+                <div id="fast_t" class="ticket_promotion">
+                    <h3>"패스트트랙"</h3>
+                    <span><img src="images/ticket/fast.png" alt="패스트트랙 이미지" width="344" height="345"></span>
+                    <p>40,000원 ~ 120,000원</p>
+                    <p>- 테마파크 이용권 별도구매</p>
+                </div>
+                <div id="kb_k" class="ticket_promotion">
+                    <h3>"KB국민카드 제휴할인"</h3>
+                    <span><img src="images/ticket/kb.png" alt="국민은행 이미지" width="548" height="548"></span>
+                    <p>1일 이용권 최대 20%할인</p>
+                    <p>- 당일 입장권 예약 시 할인 제외</p>
+                </div>
+                <div id="ticket_more_view"><a href="https://www.legoland.kr/%EC%9D%B4%EC%9A%A9%EA%B6%8C/" target="_blank">지금 예약하기</a></div>
+            </div> 
+        </div>
+    </div>
+
+    <div id="event_all">
+        <h2><span>지금</span> 레고랜드는?</h2>
+        <p>오직 레고랜드에서만 즐길 수 있는 특별한 이벤트!</p>
+        <p class="event_prev"><img src="images/icon/l_arrow.png" alt="왼쪽" width="512" height="512"></p>
+        <p class="event_next"><img src="images/icon/r_arrow.png" alt="오른쪽" width="512" height="512"></p>
+        <div id="event_s">
+            <div id="event_wrap">
+                <ul class="event">
+                    <li class="no1 event_img pin_icon1">
+                        <img src="images/event/event1.png" alt="mett & greet 행사" width="480" height="480"><br>레고 시티 4D: Officer in Pursuit<br>레고시티 테마파크</li>
+                    <li class="no2 event_img pin_icon2">
+                        <img src="images/event/event2.png" alt="mett & greet 행사" width="480" height="480"><br>레고 닌자고 라이브<br>브릭토피아 테마파크</li>
+                    <li class="no3 event_img pin_icon2">
+                        <img src="images/event/event3.png" alt="mett & greet 행사" width="480" height="480"><br>브릭스트릿 Meet & Greett<br>브릭스트릿 테마파크</li>
+                    <li class="no4 event_img pin_icon2">
+                        <img src="images/event/event4.png" alt="mett & greet 행사" width="480" height="480"><br>해적의바다 Meet & Greett<br>해적의바다 테마파크</li>
+                    <li class="no5 event_img pin_icon2">
+                        <img src="images/event/event5.png" alt="mett & greet 행사" width="480" height="480"><br>브릭토피아 Meet & Greett<br>브릭토피아 테마파크</li>
+                    <li class="no6 event_img pin_icon1">
+                        <img src="images/event/event6.png" alt="mett & greet 행사" width="480" height="480"><br>레고 캐슬 Meet & Greett<br>레고캐슬 테마파크</li>
+                    <li class="no7 event_img pin_icon1">
+                        <img src="images/event/event7.png" alt="mett & greet 행사" width="480" height="480"><br>레고 시티 Meet & Greett<br>레고시티 테마파크</li>
+                    <li class="no8 event_img pin_icon2">
+                        <img src="images/event/event8.png" alt="mett & greet 행사" width="480" height="480"><br>레고 닌자고 Meet & Greet<br>닌자고월드 테마파크</li>
+                </ul><!--event-->
+            </div><!--event_wrap-->
+        </div><!--event_s-->
+    </div><!--event_all-->
+
+    <div id="hotel_all"><!--19이미지변경참고하기-->
+        <div id="lego_hotel">
+            <div class="lego_hotel_h">
+                <h1>레고랜드 <span>호텔</span></h1>
+                <p>레고랜드 호텔에서만 만날 수 있는 테마룸 4종을 소개합니다!</p>
+                <ul>
+                    <li data-x="1">킹덤테마</li>
+                    <li data-x="2">프렌즈테마 </li>
+                    <li data-x="3">닌자고테마</li>
+                    <li data-x="4">해적테마</li>
+                </ul>
+            </div><!--lego_hotel_h-->
+            <div class="lego_hotel">
+                <p><a href="https://www.legoland.kr/legoland-%ED%98%B8%ED%85%94/legoland-%ED%98%B8%ED%85%94/" target="_blank"><img class="hotel_img1" data-x="1" src="images/hotel/hotel_1.jpg" alt="킹덤 테마" width="4000" height="2667"></a></p>
+                <p><a href="https://www.legoland.kr/legoland-%ED%98%B8%ED%85%94/legoland-%ED%98%B8%ED%85%94/" target="_blank"><img class="hotel_img2" data-x="2" src="images/hotel/hotel_2.jpg" alt="레고프렌즈 테마" width="4000" height="2667"></a></p>
+                <p><a href="https://www.legoland.kr/legoland-%ED%98%B8%ED%85%94/legoland-%ED%98%B8%ED%85%94/" target="_blank"><img class="hotel_img3" data-x="3" src="images/hotel/hotel_3.jpg" alt="레고 닌자고 테마" width="4000" height="2667"></a></p>
+                <p><a href="https://www.legoland.kr/legoland-%ED%98%B8%ED%85%94/legoland-%ED%98%B8%ED%85%94/" target="_blank"><img class="hotel_img4" data-x="4" src="images/hotel/hotel_4.jpg" alt="해적 테마" width="4000" height="2667"></a></p>
+            </div><!--.lego_hotel-->
+            <div class="hotel_text">
+                <span><img src="images/icon/double1.png" alt="큰따옴표" width="512" height="512"><img src="images/icon/double2.png" alt="큰따옴표" width="512" height="512"></span>
+                <div>
+                    <p data-x="1" class="hotel_text1" >모든 <span>왕자님, 공주님</span>들을 위한 <span>왕국</span>에서 준비한 특별한 객실!<br>신나게 놀 준비가 되셨나요? Are you ready?
+                    </p>
+                </div>
+                <div> 
+                    <p data-x="2" class="hotel_text2"><span>레고 프렌즈</span> 친구들과 설레는 <span>밤샘 파티</span> 할 준비 되었나요?<br>끝없는 재미가 기다리고 있답니다!</p>
+                </div>
+                <div>   
+                    <p data-x="3" class="hotel_text3">원소들의 힘을 마스터 할 수 있는 <span>레고 닌자고</span> 세계로 초대합니다!<br><span>훈련</span>을 끝내고 호화로운 방에서 달콤한 휴식을 만끽하세요!</p>
+                </div>
+                <div>   
+                    <p data-x="4" class="hotel_text4">어어이, 친구! 이곳은 <span>신비로운</span> 바다의 <span>보물</span>로 가득찬 방이라구!<br>멋진 모험을 할 준비는 되었겠지!?</p>
+                </div>
+            </div><!--hotel_text-->
+        </div><!--#lego_hotel-->
+    </div><!--hotel_all-->
+
+    <div id="bottom">
+        <footer id="footer">
+            <address class="b_txt">
+                <span>강원도 춘천시 하중도길128 | LEGOLAND® Korea Resort</span><br>
+                <span>대표자 : 매튜 폴 조엣 | 사업자등록번호 : 617-81-99974 | 통신판매업신고번호 : 제 2021-강원춘천-0527호 |</span><br>
+                <span>대표번호 033) 815-2300 (연중 10:00~18:00 / 점심 휴식 12:00~13:00)<br>
+                | 파크 문의 <a>LLKR.Experiences@legoland.com</a><br>
+                | 호텔 문의 <a>LLKR.Reservations@legoland.com</a></span><br>
+                <span>LEGO, the LEGO logo, the Brick and Knob configurations, the Minifigure and LEGOLAND are trademarks of the LEGO group.<br>
+                ©2020 The LEGO Group. LEGOLAND is a part of Merlin Entertainments Ltd.</span>
+            </address><!--b_txt-->
+            <ul class="b_img">
+                <li class="sns1"><a href="https://www.instagram.com/legolandkorearesort/" target="_blank"><img src="images/icon/instagram.png" alt="인스타그램" width="512" height="512">인스타그램</a></li>
+                <li class="sns2"><a href="https://www.facebook.com/LEGOLANDkor/" target="_blank"><img src="images/icon/facebook.png" alt="페이스북" width="512" height="512">페이스북</a></li>
+                <li class="sns3"><a href="https://m.blog.naver.com/legolandkorearesort/222140784987" target="_blank"><img src="images/icon/blog.png" alt="블로그" width="250" height="250">블로그</a></li>
+            </ul><!--b_img-->
+        </footer><!--footer-->
+    </div><!--bottom-->
+</body>
+</html>

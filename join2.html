@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/join2.css">
+</head>
+<body>
+    <div id="membership_wrap">
+        <div class="membership_wrap">
+            <h1><img src="images/logo/lego_land.png" alt="레고랜드 메인로고" width="1870" height="570">메인로고</h1>
+            <p id="join2_x"><img src="images/icon/crossed.png" alt="x이미지" width="512" height="512"> x</p>
+        </div><!--membership-->
+        <h1>회원가입</h1>
+        <div class="membership">
+            <p class="member1"><span>아이디</span><input type="text" class="u_id" autocomplete="off" placeholder="아이디를 입력하세요" required autofocus><span id="id_wrap">5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능합니다.</span></p>
+            <p class="member1"><span>비밀번호</span><input type="password" class="u_pwd" autocomplete="off" placeholder="비밀번호를 입력하세요" required minlength="8" maxlength="16"><span id="pwd_wrap1">8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.</span></p>
+            <p class="member1"><span>비밀번호 재확인</span><input type="password" class="u_pwd" autocomplete="off" required minlength="8" maxlength="16"><span id="pwd_wrap2">비밀번호가 일치하지 않습니다.</span></p>
+            <p class="member1"><span>이름</span><input type="text" autocomplete="off" required></p>
+            <p class="member2"><span>생년월일</span>
+                <input type="text" placeholder="년(4자)" autocomplete="off" required>
+                <select id="bitrh">
+                    <option value="">월</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <input type="text" placeholder="일" required>
+            </p>
+            <p id="gender"><span>성별</span>
+                <select class="gender">
+                    <option value="">성별</option>
+                    <option value="남자">남자</option>
+                    <option value="여자">여자</option>
+                </select><!--gender-->
+            </p>
+            <p id="number">
+                <span>휴대전화</span>
+                <select class="number">
+                    <option value="네덜란드 +31">네덜란드 +31</option>
+                    <option value="대한민국 +82" selected>대한민국 +82</option>
+                    <option value="미국/캐나다 +1">미국/캐나다 +1</option>
+                    <option value="스위스 +41">스위스 +41</option>
+                    <option value="영국 +86">영국 +86</option>
+                    <option value="일본 +81">일본 +81</option>
+                    <option value="태국 +66">태국 +66</option>
+                </select>
+                <input id="number_enter1" type="text" placeholder="전화번호 입력" autocomplete="off" required>
+                <button class="number_enter1" type="button">인증번호 받기</button>
+                <input id="number_enter2" type="text" placeholder="인증번호를 입력하세요" autocomplete="off" required>
+                <span class="number_enter2">전화번호를 다시 확인해주세요.</span>
+                <button type="button" id="sign_btn">가입하기</button>
+            </p>
+        </div>
+    </div><!--membership_wrap-->
+</body>
+</html>

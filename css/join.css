@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+h1{
+    font-family: NanumSquareNeo5;
+}
+body, a, p, li, input, button{
+    font-family: NanumSquareNeo2;
+    color: #000;
+}
+
+#join{
+    position: relative;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#join{
+    width: 400px;
+    height: 600px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 3px 0px gray;
+    border-radius: 30px;
+    margin: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    z-index: 1600;
+}
+.join_wrap{
+    position: relative;
+}
+.join_wrap > h1{
+    width: 360px;
+    height: 90px;
+    font-size: 0;
+    background: url(../images/icon/line.png) repeat-x center 70px;
+    margin-left: 20px;
+}/* 레고랜드 로고 */
+.join_wrap > h1 > img{
+    width: 197px;
+    height: 60px;
+    margin-left: 85px;
+}/* 레고랜드 로고 이미지 */
+
+#join_x{
+    font-size: 0;
+}
+#join_x > img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 14px;
+    right: 16px;
+}/* 닫기 x이미지 */
+
+#join > h2{
+    width: 400px;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}/* 회원가입 */
+#join > p:nth-of-type(1){
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 35px;
+}/*약관을 확인하신 후, 동의항목에 체크해 주세요.*/
+#join_s{
+    margin: 0 auto;
+    width: 360px;
+}
+#join_s > p:first-child{
+    margin-bottom: 15px;
+    margin-left: 25px;
+}/*전체동의*/
+.join_txt_wrap{ 
+    font-size: 12px;
+    color: rgb(143, 143, 143);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(113, 113, 113);
+}/*아래 모든 약관 및 ~ 제한될 수 있습니다.*/
+.join_txt_wrap > p{
+    margin-bottom: 4px;
+    line-height: 1.4em;
+}
+.join_txt_wrap > p > span{
+    margin-left: 15px;
+}
+.join_chk_txt span,#join_s > p > span{
+    font-size: 0;
+}
+#join label{
+    font-size: 12px;
+}
+.join_chk_txt p{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+}
+.join_chk_txt > p:nth-child(5){
+    border-bottom: none;
+}
+.join_chk_txt a{
+    float: right;
+    font-family: NanumSquareNeo5;
+    font-size: 15px;
+    margin-right: 5px;
+} /*>*/
+.join_chk_txt a:hover{
+    color: rgb(255, 94, 36);
+}
+#join_s > p:nth-child(4){
+    width: 360px;
+    text-align: center;
+    font-size: 0;   
+}/*다음으로*/
+.join_chk_txt > p:nth-child(4) > strong{
+    font-size: 12px;
+    width: 310px;
+    display: inline-block;
+    margin-bottom: 7px;
+    margin-left: 28px;
+    font-weight: normal;
+}/*[선택] SMS 프로모션 안내 수신 동의*/
+#join_s > p:nth-child(4) > input{
+    outline: none;
+    border: none;
+    background-color: rgb(255, 94, 36);
+    color: #fff;
+    width: 320px;
+    height: 55px;
+    border-radius: 40px;
+    font-size: 17.5px;
+    margin: 2px auto 0 auto;
+}/*다음으로*/
+#join_s > p:nth-child(4) > input:hover{
+    background-color: rgb(255, 118, 60);
+}
+
+
+/* 전체동의 */
+#chk_wrap2 > .all_chk2{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 13px;
+    height: 13px;
+    font-size: 0;
+    display: inline-block;
+    position: absolute;
+    top: 195px;
+    left: 23px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: transparent;
+}
+#chk_wrap2 > input{
+    position: absolute;
+    top: 193px;
+    left: 17px;
+    z-index: 2;
+    opacity: 0;
+    width: 20px;
+}
+#chk_wrap2 > .all_chk2::after{
+    content: "✔";
+    font-size: 10px;
+    color: #fff;
+    position: absolute;
+    top: 2px;
+    left: 2.3px;
+    display: none;
+}
+#chk_wrap2 input:checked + .all_chk2{
+    background-color: #3d3d3d;
+}
+#chk_wrap2 input:checked + .all_chk2::after{
+    display: block;
+}
+/* 약관동의 */
+.join_chk_txt > p span{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 13px;
+    height: 13px;
+    font-size: 0;
+    display: inline-block;
+    position: absolute;
+    left: 23px;
+    margin-top: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: transparent;
+}
+.join_chk_txt > p:nth-child(4) span:nth-of-type(2){
+    left: 136px;
+    margin-top: 3px;
+}
+.join_txt2{
+    position: absolute;
+    left: 21px;
+    top: 451px;
+}
+.join_txt3{
+    position: absolute;
+    left: 134px;
+    top: 451px;
+}
+#join_chk1,#join_chk2,#join_chk3{
+    position: absolute;
+    left: 16px;
+    z-index: 2;
+    opacity: 0;
+    width: 20px;
+}
+#join_chk4{
+    position: absolute;
+    left: 21px;
+    top: 453px;
+    z-index: 2;
+    opacity: 0;
+}
+#join_chk5{
+    position: absolute;
+    left: 134px;
+    top: 453px;
+    z-index: 2;
+    opacity: 0;
+}
+.join_chk_txt > p > .join_agree1, .join_agree{
+    margin-left: 25px;
+}
+.join_chk_txt p .join_txt::after{
+    content: "✔";
+    font-size: 10px;
+    color: #fff;
+    position: absolute;
+    top: 2px;
+    left: 2.3px;
+    display: none;
+}
+.join_chk_txt p input:checked + .join_txt{
+    background-color: #3d3d3d;
+}
+.join_chk_txt p input:checked + .join_txt::after{
+    display: block;
+}
+
+/* 필수약관동의 */
+.all_agree{
+    font-size: 11px;
+    color: red;
+    font-weight: bold;
+    padding-left: 10px;
+}
