@@ -55,6 +55,12 @@
 
 <br/>
 
+#### - 전체메뉴 : addClass, slideUp, slideDown를 이용한 전체메뉴
+![메뉴](https://user-images.githubusercontent.com/117965325/214767751-aa56ea55-6b1a-44b5-ae59-8e1e36ec8e2c.png)
+
+
+<br/>
+
 ### * 레고랜드 홍보 및 정보를 담은 메인내용 부분
 #### - get, play, pause로 화면 스크롤에 따른 영상 정지, 재생
 ![1](https://user-images.githubusercontent.com/117965325/214740293-14e204f0-025f-4b8a-b7f6-2a3af43e6115.png)
