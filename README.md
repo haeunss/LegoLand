@@ -31,7 +31,7 @@
     <sapn><img src="https://img.shields.io/badge/Vercel-00000?style=for-the-badge&logo=Vercel&logoColor=white"></sapn>
 </div>
 
-## 📢 [URL](https://lego-land-five.vercel.app/)
+## 📢 [레고랜드 배포 링크](https://lego-land-five.vercel.app/)
 
 <br/>
 <br/>
