@@ -85,7 +85,7 @@
 #### - HTML의 data 속성과 fadeOut, fadeIn으로 구현한 호텔정보
 ![5](https://user-images.githubusercontent.com/117965325/214740290-968b7c3b-a590-41a9-90e9-ad2e5c30134a.png)
 
-### * 기업 정보가 담긴 웹페이지 하단
+#### - 기업 정보가 담긴 웹페이지 하단
 ![하단](https://user-images.githubusercontent.com/117965325/214740310-f493abc1-0c75-472f-8759-90bd07c0ed88.png)
 
 <br/>
